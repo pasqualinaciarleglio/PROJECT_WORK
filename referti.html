@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Referti - Azienda Ospedaliera San Pio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="stylereferti.css">
+
+    <!-- SCRIPT DI SICUREZZA -->
+    <script>
+      const cfUtente = sessionStorage.getItem('utenteLoggatoCF');
+      
+      if (!cfUtente) {
+        sessionStorage.setItem('redirectDopoLogin', window.location.href);
+
+        window.location.replace("login.html"); 
+      }
+    </script>
+</head>
+<body>
+
+    <!-- INIZIO DASHBOARD -->
+    <div class="dashboard-container">
+
+        <!-- TASTO TORNA ALLA HOME -->
+        <a href="index.html" class="btn-back-home">
+            <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+        </a>
+
+        <!-- INIZIO HEADER -->
+        <header class="dashboard-header">
+            <div class="user-info">
+                <i class="fa fa-user-circle fa-2x transition-scale"></i>
+                <div>
+                    <h2 id="user-name">Benvenuto!</h2>
+                    <p id="user-cf">CF: RSSMRA80A01F205Z</p>
+                </div>
+            </div>
+            
+            <button class="btn-logout" onclick="eseguiLogout()">Esci</button>
+        </header>
+        
+        <main class="content">
+            <div class="title-section">
+                <h3>I Tuoi Referti Online</h3>
+                <p>I documenti sono disponibili per 45 giorni dalla data di pubblicazione</p>
+            </div>
+            
+            <div id="lista-referti" class="referti-grid">
+                <div class="loader">Caricamento documenti in corso</div>
+            </div>
+        </main>
+    </div>
+    <!-- FINE DASHBOARD -->
+
+    <!-- CUSTOM JS -->
+    <script src="scriptreferti.js"></script>
+</body>
+</html>

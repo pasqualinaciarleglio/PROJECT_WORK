@@ -1,0 +1,160 @@
+/* GENERAL SETTING */
+
+/* FONT */
+/* font-family: "Noto Serif", serif; */
+/* font-family: "Raleway", sans-serif; */
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: linear-gradient(135deg, #5a9675 0%, #81cea1 100%);
+    margin: 0;
+    color: #333;
+}
+
+/* BTN BACKHOME */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #0d362d;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    background-color: #0d362d;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transform: translateX(-5px); 
+}
+
+/* CUSTOM DASHBOARD */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    background: #185548ee;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-family: "Noto Serif", serif;
+}
+
+/* CUSTOM USER */
+.user-info { display: flex; align-items: center; gap: 15px; }
+.user-info h2 { margin: 0; font-size: 1.2rem; }
+.user-info p { 
+    margin: 0; 
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 0.9rem; 
+}
+
+/* CUSTOM BTN */
+.btn-logout {
+    background: rgba(255, 255, 255, 0.405);
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #0d362d;
+}
+
+/* CUSTOM TITLE */
+.title-section h3 { 
+    color: #0d362d; 
+    font-size: 2rem; 
+    margin-bottom: 0;
+    font-family: "Noto Serif", serif; 
+}
+
+.title-section p { 
+    color: #185548;
+    margin-bottom: 25px; 
+    font-size: 1.2rem;
+}
+
+/* CUSTOM REFERTI */
+.referti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.referto-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #ccc;
+    transition: transform 0.2s;
+}
+
+.referto-card:hover { transform: translateY(-5px); }
+
+
+/* CUSTOM STATO REFERTI */
+.referto-card.disponibile { border-left-color: #27ae60; }
+.referto-card.lavorazione { border-left-color: #f1c40f; }
+
+.referto-card h4 { 
+    margin: 0 0 10px 0; 
+    color: #0d362d;
+    font-weight: 700;
+}
+
+.referto-card p { 
+    margin: 5px 0; 
+    font-size: 0.95rem;
+    color: #333333; 
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.badge-ok { background: #e8f6ef; color: #27ae60; }
+.badge-wait { background: #fef9e7; color: #f39c12; }
+
+/* CUSTOM BTN */
+.btn-download {
+    width: 100%;
+    padding: 10px;
+    background: #0d362d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-download:hover {
+    background-color: #58b46f;
+}
+
+.btn-download:disabled { background: #bdc3c7; cursor: not-allowed; }

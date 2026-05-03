@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione Visita Medica - Azienda Ospedaliera San Pio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="styleprenotazioni.css">
+</head>
+<body>
+
+    <!-- INIZIO MODULO DI REGISTRAZIONE -->
+    <div class="container">
+
+        <!-- TASTO TORNA ALLA HOME -->
+        <a href="index.html" class="btn-back-home">
+            <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+        </a>
+
+        <h2>Prenota la tua Visita</h2>
+        <p>Compila il modulo sottostante per richiedere un appuntamento.</p>
+        
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="nome">Nome e Cognome</label>
+                <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="esempio@mail.com" required>
+            </div>
+
+            <div class="form-group custom-dropdown-container">
+                <label for="specialista">Specializzazione</label>
+                
+                <select id="specialista" name="specialista" required style="display: none;">
+                    <option value="">Seleziona un dipartimento</option>
+                    <option value="lungadegenza">Dipartimento delle Scienze e della Lungadegenza</option>
+                    <option value="oncologia">Dipartimento di Oncologia</option>
+                    <option value="neurologia">Dipartimento di Neuroscienze</option>
+                    <option value="chirurgia">Dipartimento di Scienze Chirurgiche</option>
+                    <option value="infantile">Dipartimento Materno infantile</option>
+                    <option value="cardiologia">Dipartimento Cardio-Vascolare</option>
+                </select>
+                
+                <div class="custom-select" id="customSelect">
+                    <div class="select-selected" id="selectTrigger">Seleziona un dipartimento</div>
+                    <div class="select-items hidden" id="selectOptions">
+                        <div data-value="lungadegenza">Dipartimento delle Scienze e della Lungadegenza</div>
+                        <div data-value="oncologia">Dipartimento di Oncologia</div>
+                        <div data-value="neurologia">Dipartimento di Neuroscienze</div>
+                        <div data-value="chirurgia">Dipartimento di Scienze Chirurgiche</div>
+                        <div data-value="infantile">Dipartimento Materno infantile</div>
+                        <div data-value="cardiologia">Dipartimento Cardio-Vascolare</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ora">Orario</label>
+                    <input type="time" id="ora" name="ora" required>
+                    <small style="color: #000000; font-size: 0.8rem;">Fasce disponibili: 09:00-13:00 <br> e 15:00-17:00</small>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit">Conferma Prenotazione</button>
+        </form>
+        <!-- FINE MODULO REGISTRAZINE -->
+
+        <!-- MESSAGGIO DI CONFERMA PRENOTAZIONE -->
+        <div id="messaggioConferma" class="hidden">
+            <div class="success-card">
+                <h3>✅ Prenotazione Inviata!</h3>
+                <p id="riepilogo"></p>
+                <button onclick="resetForm()">Nuova Prenotazione</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS CUSTOM -->
+    <script src="scriptprenotazioni.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* GENERAL SETTING */
+
+/* FONT */
+/* font-family: "Noto Serif", serif; */
+/* font-family: "Raleway", sans-serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Serif", serif;
+    background-color: #0d362c;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* BTN BACKHOME */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #0d362d;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    background-color: #7cd994;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transform: translateX(-5px); 
+}
+
+/* CUSTOM CONTAINER */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+/* CUSTOM TEXT */
+h2 {
+    margin-top: 0;
+    color: #0d362d;
+    font-weight: 700;
+}
+
+p {
+    color: #000000;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0d362c;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0d362c;
+    box-shadow: 0 0 5px rgba(13, 54, 44, 0.2);
+}
+
+/* CUSTOM CF */
+.cf-input {
+    text-transform: uppercase;
+}
+
+/* CUSTOM BTN */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #7cd994;
+}
+
+.btn-primary { background-color: #0d362d; color: white; }
+.btn-secondary { background-color: #0d362d; color: white; }
+
+button:hover { 
+    transform: translateY(-1px);
+}
+
+.toggle-text { margin-top: 20px; }
+.toggle-text a { color: #219ac6; text-decoration: underline; font-weight: bold; }
+
+.hidden { display: none; }

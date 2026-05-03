@@ -1,0 +1,183 @@
+/* GENERAL SETTING */
+
+/* FONT */
+/* font-family: "Noto Serif", serif; */
+/* font-family: "Raleway", sans-serif; */
+
+body {
+    font-family: "Noto Serif", serif;
+    background-color: #0d362c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* BTN BACKHOME */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #0d362d;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    background-color: #0d362d;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transform: translateX(-5px); 
+}
+
+/* CUSTOM CONTAINER */
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* CUSTOM TEXT */
+h2 {
+    color: #0d362c;
+    margin-top: 0;
+    font-family: "Noto Serif", serif;
+}
+
+/* CUSTOM RIQUADRI */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0d362c;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* CUSTOM BTN */
+.btn-submit, .success-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0e3c31;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover, .success-card button:hover {
+    background-color: #7cd994;
+    color: #0d362c;
+    font-weight: bold;
+}
+
+/* NASCONDI ELEMENTI */
+.hidden {
+    display: none !important;
+}
+
+.success-card {
+    text-align: center;
+    padding: 1rem;
+    background: #e8f6ef;
+    border-radius: 8px;
+    border: 1px solid #27ae60;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #0d362c;
+    box-shadow: 0 0 5px rgba(13, 54, 44, 0.4);
+}
+
+/* CUSTOM MENU A TENDINA PERSONALIZZATO */
+.custom-dropdown-container {
+    position: relative;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.select-selected {
+    background-color: #ffffff;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #34495e;
+    user-select: none;
+}
+
+.select-selected::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    font-size: 12px;
+    color: #0d362c;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    margin-top: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden; 
+}
+
+.select-items div {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.select-items div:last-child {
+    border-bottom: none;
+}
+
+.select-items div:hover {
+    background-color: #0d362c;
+    color: #ffffff;
+}

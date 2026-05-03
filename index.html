@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Ospedale, Benevento, Campania, San Pio, Medici, Ritiro Referti">
+    <title>Azienda Ospedaliera San Pio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- ICONE MATERIAL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<!-- INIZIO NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-ospedale shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/logo regione.png" alt="Regione" height="60" class="me-3 bg-white p-1 rounded">
+            <img src="img/logo.png" alt="San Pio" height="60" class="me-3 bg-white p-1 rounded">
+            <div class="lh-1 d-none d-sm-block">
+                <h1 class="h6 mb-1 text-white fw-bold"style="letter-spacing: 2px">AZIENDA OSPEDALIERA SAN PIO</h1>
+                <small class="text-white-50" style="letter-spacing: 5px;">BENEVENTO</small>
+            </div>
+        </a>
+        
+        <!-- HAMBUREGER MENU -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LINK PAGINE -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 fw-semibold">
+                <li class="nav-item"><a class="nav-link text-white" href="https://aosanpio.it/dipartimenti/">Pazienti e Cura</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="https://aosanpio.it/categoria/archivi/">News e Avvisi</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="https://aosanpio.it/contatti/">Contatti</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                <!-- BTN PRENOTAZIONI -->
+                <a href="prenotazioni.html" class="btn btn-light text-danger fw-bold rounded-pill px-4 shadow-sm">
+                    <i class="fa fa-calendar-check me-2"></i>PRENOTAZIONI
+                </a>
+                <!-- ICON LOGIN -->
+                <a href="login.html" class="text-white ms-2" title="Area Personale">
+                    <i class="fa fa-user-circle fa-2x transition-scale"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- FINE NAVBAR -->
+
+<!-- INIZIO HEADER -->
+<main class="container">
+    <div class="hero-wrapper shadow-lg">
+        <img fetchpriority="high" src="img/background.png" class="hero-bg-blur" alt="">
+        
+        <!-- SPECCHIO DI RICERCA -->
+        <div class="hero-overlay px-3">
+            <h5 class="text-uppercase tracking-wide mb-2">Azienda Ospedaliera di Rilievo Nazionale ed Alta Specializzazione DEA di II livello</h5>
+            <h2 class="display-4 fw-bold mb-4">La sanità del futuro, oggi, per tutti</h2>
+
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Cerca nel sito (es. referti)...">
+                <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                <i class="fa-solid fa-xmark close-icon" style="display: none;"></i>
+            </div>
+
+            <!-- COLLEGAMENTI RAPIDI -->
+            <div class="mt-3 mb-4">
+                <a href="referti.html" class="quick-btn">REFERTI</a>
+                <a href="https://aosanpio.it/dipartimenti/" class="quick-btn">DOTTORI</a>
+                <a href="prenotazioni.html" class="quick-btn">VISITE</a>
+            </div>
+
+            <h2 class="small text-white-70 mt-5">
+                Puoi cercare per nome dell'esame, specialità o tipo di prestazione. <br>
+                In caso di dubbi, il nostro staff è a tua disposizione per aiutarti.
+            </h2>
+        </div>
+    </div>
+</main>
+
+<!-- CAROSELLO DIPARTIMENTI -->
+<section class="departments-carousel py-5 mt-5 bg-gradient-verde shadow-sm">
+    <div class="container position-relative">
+        <h2 class="text-center text-white mb-4 fw-bold">I Nostri Dipartimenti</h2>
+        
+        <div class="d-flex align-items-center">
+            <button class="btn btn-light rounded-circle shadow me-3" onclick="moveCarousel(-1)" style="width: 50px; height: 50px; z-index: 10;">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <!-- SCROLL -->
+            <div class="d-flex gap-4 overflow-hidden w-100 py-3" id="carousel">
+                <div class="dept-card">
+                    <img src="img/neurologia.jpg" alt="Neurologia">
+                    <a href="https://aosanpio.it/dipartimento/neuroscienze/"><h3>Dipartimento di Neuroscienze</h3></a>
+                </div>
+                <div class="dept-card">
+                    <img src="img/oncologico.jpg" alt="Oncologia">
+                    <a href="https://aosanpio.it/dipartimento/oncologia/"><h3>Dipartimento di Oncologia</h3></a>
+                </div>
+                <div class="dept-card">
+                    <img src="img/chirurgo.jpg" alt="Chirurgia">
+                    <a href="https://aosanpio.it/dipartimento/scienze-chirurgiche/"><h3>Dipartimento di Scienze Chirurgiche</h3></a>
+                </div>
+                <div class="dept-card">
+                    <img src="img/infantile.jpg" alt="Maternità">
+                    <a href="https://aosanpio.it/dipartimento/materno-infantile/"><h3>Dipartimento Materno infantile</h3></a>
+                </div>
+                <div class="dept-card">
+                    <img src="img/lungadegenza.jfif" alt="Lungadegenza">
+                    <a href="https://aosanpio.it/dipartimento/scienze-mediche/"><h3>Dipartimento delle Scienze e della Lungadegenza</h3></a>
+                </div>
+                <div class="dept-card">
+                    <img src="img/cardiovascolare.jfif" alt="Cardio Vascolare">
+                    <a href="https://aosanpio.it/dipartimento/cardio-toraco-vascolare/"><h3>Dipartimento Cardio Vascolare</h3></a>
+                </div>
+            </div>
+
+            <button class="btn btn-light rounded-circle shadow ms-3" onclick="moveCarousel(1)" style="width: 50px; height: 50px; z-index: 10;">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- FINE CAROSELLO DIPARTIMENTI -->
+
+<!-- INIZIO SECTION CONTATTI E MAPPA -->
+<section class="info-section py-5 bg-ospedale-light text-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- CONTAINER CONTATTI -->
+            <div class="col-md-6">
+                <h3 class="mb-4 border-bottom pb-2 fw-bold">RIFERIMENTI</h3>
+                <ul class="list-unstyled fs-5">
+                    <li class="mb-4 d-flex align-items-center">
+                        <div class="bg-white text-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-phone fs-4"></i>
+                        </div>
+                        <strong>CENTRALINO:</strong>&nbsp; 0824 57111
+                    </li>
+                    <li class="mb-4 d-flex align-items-center">
+                        <div class="bg-white text-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-envelope fs-4"></i>
+                        </div>
+                        <strong>PEC:</strong>&nbsp; protocollo@pec.ao-sanpio.it
+                    </li>
+                    <li class="mb-2 d-flex align-items-center">
+                        <div class="bg-white text-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-fax fs-4" aria-hidden="true"></i>
+                        </div>
+                        <strong>P.IVA:</strong>&nbsp; 01234567890
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTAINER MAPPA GOOGLE -->
+            <div class="col-md-6">
+                <div class="bg-white p-2 rounded-4 shadow">
+                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.076632422791!2d14.786524115421946!3d41.13410537928731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a4f6be5c0d5c3%3A0x6b8d96b99839446d!2sOspedale%20Gaetano%20Rummo!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit"" 
+                        width="100%" height="300" style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FINE HEADER -->
+
+<!-- INIZIO FOOTER -->
+<footer class="main-footer bg-footer text-white pt-5 pb-3 mt-auto">
+    <div class="container text-center text-md-start">
+        <div class="text-center border-bottom border-secondary pb-4 mb-4">
+            <h4 class="fw-bold text-uppercase text-white" style="letter-spacing: 1px;">Azienda Ospedaliera di Rilievo Nazionale ed Alta Specializzazione DEA di II Livello</h4>
+            <h2 class="h5 mt-3 text-white">DIRETTORE GENERALE: MARIA MORGANTE</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3 text-white">Tutti i Servizi</h5>
+                <ul class="list-unstyled lh-lg">
+                    <li><a href="referti.html" class="text-white text-decoration-none">Ritiro Referti</a></li>
+                    <li><a href="prenotazioni.html" class="text-white text-decoration-none">Prenota Ora</a></li>
+                    <li><a href="login.html" class="text-white text-decoration-none">Registrati</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3 text-white">Menu Rapido</h5>
+                <ul class="list-unstyled lh-lg">
+                    <li><a href="https://aosanpio.it/azienda/" class="text-white text-decoration-none">Chi Siamo</a></li>
+                    <li><a href="https://aosanpio.it/amministrazione-trasparente/" class="text-white text-decoration-none">Amministrazione Trasparente</a></li>
+                    <li><a href="https://aosanpio.it/amministrazione-trasparente/servizi-erogati/carta-dei-servizi-e-standard-di-qualita/" class="text-white text-decoration-none">Carta dei Servizi</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3 text-white">Seguici</h5>
+                <p>Rimani aggiornato sui nostri servizi.</p>
+                <div class="d-flex gap-3 fs-3">
+                    <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5 pt-3 border-top border-secondary text-white-50 small">
+            <p>&copy; 2026 Azienda Ospedaliera San Pio Benevento - Tutti i diritti riservati.</p>
+        </div>
+    </div>
+</footer>
+<!-- FINE FOOTER -->
+
+<!-- JS BOOTSTRAP PER L'HAMBURGER MENU -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS CUSTOM -->
+<script src="script.js"></script>
+</body>
+</html>

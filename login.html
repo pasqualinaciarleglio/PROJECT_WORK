@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesso Area Riservata - Azienda Ospedaliera San Pio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+
+<div class="auth-container">
+    
+    <!-- TASTO TORNA ALLA HOME -->
+    <a href="index.html" class="btn-back-home">
+        <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+    </a>
+
+    <!-- INZIO MODULO LOGIN -->
+    <div id="login-form" class="auth-card">
+        <h2>Accedi</h2>
+        <p>Inserisci le tue credenziali.</p>
+        <form onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="login-cf">Codice Fiscale</label>
+                <input type="text" id="login-cf" placeholder="RSSMRA80A01F205Z" required maxlength="16">
+            </div>
+            <div class="input-group">
+                <label for="login-pass">Password</label>
+                <input type="password" id="login-pass" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn-primary">ENTRA</button>
+        </form>
+        <p class="toggle-text">Non hai un account? <a href="#" onclick="toggleAuth()">Registrati qui</a></p>
+    </div>
+    <!-- FINE MODULO LOGIN -->
+
+    <!-- INIZIO MODULO REGISTRAZIONE -->
+    <div id="register-form" class="auth-card hidden">
+        <h2>Registrazione</h2>
+        <p>Crea il tuo profilo.</p>
+        <form onsubmit="handleRegister(event)">
+            <div class="input-group">
+                <label for="reg-nome">Nome e Cognome</label>
+                <input type="text" id="reg-nome" placeholder="Mario Rossi">
+            </div>
+            <div class="input-group">
+                <label for="reg-cf">Codice Fiscale</label>
+                <input type="text" id="reg-cf" placeholder="RSSMRA80A01F205Z" required maxlength="16" style="text-transform: uppercase;">
+            </div>
+            <div class="input-group">
+                <label for="reg-pass">Crea Password</label>
+                <input type="password" id="reg-pass" required minlength="8" autocomplete="new-password">
+            </div>
+            <button type="submit" class="btn-secondary">CREA ACCOUNT</button>
+        </form>
+        <p class="toggle-text">Hai già un account? <a href="#" onclick="toggleAuth()">Accedi</a></p>
+    </div>
+    <!-- FINE MODULO REGISTRAZIONE -->
+</div>
+
+<!-- JS CUSTOM -->
+<script src="scriptlogin.js"></script>
+</body>
+</html>
